@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1.page-header Add Books
+  form(method='POST', action='/books/add')
+    #form-group
+      label Title:
+      input.form-control(name='title', type='text', placeholder='Enter Title')
+    #form-group
+      label Author Name:
+      input.form-control(name='bookauthor', type='text', placeholder='Enter Author Name')
+    #form-group
+      label Pages 
+      input.form-control(name='pagenumber', type='number', placeholder='Enter the Number of Pages')
+    #form-group
+      label Description:
+      textarea.form-control(name='body', placeholder='Enter Description')
+    br
+    input.btn.btn-primary(type='submit',value='Submit')

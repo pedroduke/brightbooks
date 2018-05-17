@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1.page-header= book.title
+  h5 Uploaded by #{author}
+    br
+    br
+  label Book Author:
+  em 
+  p= book.bookauthor
+  em 
+  label Book Author:
+  em 
+  p= book.pagenumber
+  h4.page-header Description
+  p= book.body
+  hr
+  if user
+    if user.id ==book.author
+      a.btn.btn-default(href='/books/edit/'+book._id) Edit 
+      a.btn.btn-danger.delete-book(href='#',data-id=book._id) Delete

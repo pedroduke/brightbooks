@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/books/edit/'+book._id)
+    #form-group
+      label Title:
+      input.form-control(name='title', type='text', value=book.title)  
+    #form-group
+      label Author:
+      input.form-control(name='author', type='text', value=book.author)
+    #form-group
+      label Book Author:
+      input.form-control(name='bookauthor', type='text', value=book.bookauthor)
+    #form-group
+      label Pages:
+      input.form-control(name='pagenumber', type='text', value=book.pagenumber)
+    #form-group
+      label Description:
+      textarea.form-control(name='body')= book.body
+    br
+    input.btn.btn-primary(type='submit',value='Submit')

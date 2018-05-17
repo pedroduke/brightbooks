@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1.page-header #{title}
+  ul.list-group
+    each book, i in books
+      br
+      li.list-group-item
+        label Title: 
+        em 
+        a(href="/books/"+book._id)= book.title 
+        em 
+        label Book Author: 
+        em 
+        = book.bookauthor 
+        em 
+        label Pages Number: 
+        em 
+        = book.pagenumber 
+        br
+        label(class='read-more') Description: 
+        em 
+        = book.body
