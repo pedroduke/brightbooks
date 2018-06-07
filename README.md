@@ -1,4 +1,4 @@
-# Bright Books
+# Books
 
 ## Technologies
 * Node.js
